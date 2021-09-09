@@ -32,7 +32,8 @@
 <br>
 아이디를 다시 검색해 주세요!
 <br>
-<input type="button" value="닫기" onclick="go('')">
+<input type="text" class="newId">
+<input type="button" value="닫기" onclick="go()">
 <%
 } else { %>
 검색된 아이디는 <%=id%>이며 사용가능합니다
@@ -49,8 +50,9 @@
   if (conn != null) conn.close();
 %>
 <script>
-  function go(inin){
-    opener.idcallback(inin);
+  function go(){
+    const newId = document.querySelector(".newId").value;
+    opener.callBackID(newId);
     window.close();
   }
 </script>
