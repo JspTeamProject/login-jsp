@@ -27,7 +27,7 @@
 
 //    int result = 0;
     try {
-        String sql = "select password from db01.member where id=? and name=?";
+        String sql = "select pw from db01.member where id=? and name=?";
 
         preparedStatement = conn.prepareStatement(sql);
 
