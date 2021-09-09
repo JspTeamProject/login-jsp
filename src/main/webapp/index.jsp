@@ -14,7 +14,7 @@
       a:hover{color:coral;text-decoration: underline;}
 </style>
 <body>
-<table style="margin-left : auto; margin-right : auto; text-align: center; border:solid coral 1px" >
+<table style="margin-left : auto; margin-right : auto; text-align: center; border:solid coral 1px">
     <form method="post" action="login.jsp">
         <tr>
             <td>아이디</td>

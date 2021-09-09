@@ -4,7 +4,7 @@
     String server = "localhost";
     String database = "db01";
     String user_name = "root";
-    String password = "1234";
+    String password = "2754";
     try {
         Class.forName("com.mysql.jdbc.Driver");
     } catch (ClassNotFoundException e) {
