@@ -4,7 +4,7 @@
 %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="Pack.Member" %>
-<%@ include file="dbconn.jsp"%>
+<%@include file="PiDBconn.jsp" %>
 <jsp:useBean id="recv" class="Pack.Member" scope="page"/>
 <jsp:setProperty name="recv" property="*"/>
 <html>
@@ -24,7 +24,7 @@
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     try {
-        String sql = "select * from member where id = ? and pw = ? ";
+        String sql = "select * from db01.member where id = ? and pw = ? ";
         System.out.println(recv.getId());
         System.out.println(recv.getPw());
         preparedStatement = conn.prepareStatement(sql);

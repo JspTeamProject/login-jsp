@@ -1,10 +1,14 @@
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html;Charset=UTF-8");
+%>
 <%@ page import="java.sql.*" %>
 <%
     Connection conn = null;
     String server = "localhost";
     String database = "db01";
     String user_name = "root";
-    String password = "2754";
+    String password = "1234";
     try {
         Class.forName("com.mysql.jdbc.Driver");
     } catch (ClassNotFoundException e) {

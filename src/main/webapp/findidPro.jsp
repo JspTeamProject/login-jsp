@@ -1,3 +1,7 @@
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html;Charset=UTF-8");
+%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="Pack.memberBean" %>
 <%@include file="PiDBconn.jsp" %>

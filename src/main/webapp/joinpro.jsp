@@ -1,12 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ojh21
-  Date: 2021-09-09
-  Time: 오후 2:16
-  To change this template use File | Settings | File Templates.
---%>
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html;Charset=UTF-8");
+%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<%@include file="dbconn.jsp" %>
+<%@include file="PiDBconn.jsp" %>
 <%@ page import="Pack.memberBean"%>
 <body>
 <jsp:useBean id="recv" class="Pack.memberBean" scope="page"/>
@@ -23,7 +20,7 @@
     int result = 0;
 
     try {
-        String sql = "insert into member(id,pw,name,email,address,phone) values(?,?,?,?,?,?)";
+        String sql = "insert into db01.member(id,pw,name,email,address,phone) values(?,?,?,?,?,?)";
         
         preparedStatement = conn.prepareStatement(sql);
         
@@ -41,7 +38,7 @@
 %>
 		<script>
 			alert("회원가입 성공하셨습니다");
-			location.href="login.jsp";
+			location.href="index.jsp";
 		</script>
 <%			
 

@@ -4,7 +4,7 @@
 %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="Pack.Member" %>
-<%@ include file="dbconn.jsp"%>
+<%@include file="PiDBconn.jsp" %>
 <jsp:useBean id="recv" class="Pack.Member" scope="page"/>
 <jsp:setProperty name="recv" property="*"/>
 <html>
@@ -26,7 +26,7 @@
     System.out.println(request.getParameter("name"));
     System.out.println(request.getParameter("address"));
     try {
-        String sql = "update member set pw = ?, name = ?, email = ?, address = ?, phone = ? where id ='"+recv.getId()+"'";
+        String sql = "update db01.member set pw = ?, name = ?, email = ?, address = ?, phone = ? where id ='"+recv.getId()+"'";
         preparedStatement = conn.prepareStatement(sql);
         System.out.println(recv.getName());
         System.out.println(recv.getAddress());

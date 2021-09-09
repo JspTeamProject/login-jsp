@@ -1,3 +1,7 @@
+<%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html;Charset=UTF-8");
+%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -120,7 +124,7 @@
 				<input type="button" value="중복확인"
 						onclick="idchk()" class="btn">
 				<div class="textForm">
-					<input type="password" name="password" id="password" class="input"
+					<input type="password" name="pw" id="password" class="input"
 						placeholder="비밀번호">
 				</div>
 				<div class="textForm">
