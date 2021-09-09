@@ -1,4 +1,5 @@
-public class Member {
+package Pack;
+public class memberBean {
     String id;
     String pw;
     String name;
