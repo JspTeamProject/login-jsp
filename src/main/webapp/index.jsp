@@ -10,20 +10,20 @@
 </style>
 <body>
 <table style="margin-left : auto; margin-right : auto; text-align: center; border:solid coral 1px" >
-    <form method="post" action="loginPro.jsp">
-        <tr>
-            <td>이름</td>
-            <td><input type="text" name="name"></td>
-            <td rowspan="2"><input style="height:50px;background:lightcoral; border:0px" type="submit" value="로그인"></td>
-        </tr>
+    <form method="post" action="loginpro.jsp">
         <tr>
             <td>아이디</td>
             <td><input type="text" name="id"></td>
+            <td rowspan="2"><input style="height:50px;background:lightcoral; border:0px" type="submit" value="로그인"></td>
         </tr>
         <tr>
-            <td><a class="loginMenu" href="#">회원가입</a></td>
-            <td><a class="loginMenu" href="#">아이디 찾기</a></td>
-            <td><a class="loginMenu" href="#">비밀번호 찾기</a></td>
+            <td>비밀번호</td>
+            <td><input type="text" name="pw"></td>
+        </tr>
+        <tr>
+            <td><a href="join.jsp">회원가입</a></td>
+            <td><a href="findid.jsp">아이디 찾기</a></td>
+            <td><a href="findpw.jsp">비밀번호 찾기</a></td>
         </tr>
     </form>
 </table>
