@@ -1,11 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ojh21
-  Date: 2021-09-09
-  Time: 오후 2:15
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html;Charset=UTF-8");
+%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="Pack.Member" %>
 <%@ include file="dbconn.jsp"%>
 <jsp:useBean id="recv" class="Pack.Member" scope="page"/>

@@ -1,11 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ojh21
-  Date: 2021-09-09
-  Time: 오후 2:15
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html;Charset=UTF-8");
+%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ page import="Pack.Member" %>
 <%@ include file="dbconn.jsp"%>
 <jsp:useBean id="recv" class="Pack.Member" scope="page"/>
@@ -33,6 +30,7 @@
         preparedStatement = conn.prepareStatement(sql);
         preparedStatement.setString(1, recv.getId());
         preparedStatement.setString(2, recv.getPw());
+
         resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
             recv.setId(resultSet.getString("id"));
@@ -53,7 +51,7 @@
 %>
 <fieldset>
     <legend>로그인 정보</legend>
-    <form method="post" action="update.jsp">
+    <form method="post" action="update.jsp" accept-charset="UTF-8">
         <table style="margin-left : auto; margin-right :auto;">
             <tr>
                 <td style="text-align: right">접속 중인 ID :</td>
