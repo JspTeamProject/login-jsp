@@ -104,7 +104,6 @@
 	    
 		return true;
  	}
-
  </script>
 </head>
 <body>
@@ -112,13 +111,14 @@
 		<label>회원가입</label>
 		<form method="post" action="joinpro.jsp" onsubmit="return check()">
 
-			<div>
-				<div class="textForm">
+			<div class="wrap2">
+				<div class="textForm idInput">
 					<input type="text" name="id" id="id" class="input"
 						placeholder="아이디">
-					<input type="button" value="중복확인"
-						onclick="idchk()">
+					
 				</div>
+				<input type="button" value="중복확인"
+						onclick="idchk()" class="btn">
 				<div class="textForm">
 					<input type="password" name="password" id="password" class="input"
 						placeholder="비밀번호">
@@ -137,14 +137,14 @@
 				</div>
 
 				<div class="text2">
-					<input type="text" id="sample6_postcode" class="postcode"
+					<input type="text" id="sample6_postcode" 
 						name="postcode" placeholder="우편번호">
 					<input type="button"
 						onclick="sample6_execDaumPostcode()" value="우편번호">
 				</div>
-				<input type="text" id="sample6_address" class="address join_text"
-					name="address" placeholder="주소">
-				<div class="text2">
+				<div class="textForm"><input type="text" id="sample6_address" class="input"
+					name="address" placeholder="주소"></div>
+				<div class="text3">
 					<input type="text" id="sample6_detailAddress" class="detailadd"
 						name="detailadd" placeholder="상세주소">
 					<input type="text"
