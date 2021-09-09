@@ -103,24 +103,8 @@
 	    }
 	    
 		return true;
-		
-		
  	}
-    const idchk = () => {
-        const idInput = document.querySelector("#id").value;
-        if (idInput === "") {
-        	Swal.fire("id를 입력해주세요.");
-            return false;
-        } else {
-            window.open("idchk.jsp?id=" + idInput, "아이디 중복검사 팝업창", "width=500,height=600");
-        }
-    };
 
-    function callBackID(newId) {
-        const idInput = document.querySelector("#id");
-        idInput.value = newId;
-    };
- 
  </script>
 </head>
 <body>
@@ -167,9 +151,8 @@
 						id="sample6_extraAddress" id="extraadd" name="extraadd"
 						placeholder="참고항목">
 				</div>
-
 				<div>
-					<input type="submit" value="회원가입" class="btn">
+					<input type="submit" value="회원가입" class="btn" id = "submit" disabled>
 				</div>
 			</div>
 		</form>
