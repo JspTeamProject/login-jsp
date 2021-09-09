@@ -13,24 +13,33 @@
 <html>
 <head>
     <title>Login Result</title>
+    <meta charset="UTF-8">
 </head>
+<style>
+    a:link{color:coral; text-decoration:none;}
+    a:visited{color:coral;text-decoration: none;}
+    a:hover{color:black;text-decoration: underline;}
+</style>
 <body>
 <%
     request.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html;Charset=UTF-8");
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     try {
         String sql = "select * from member where id = ? and pw = ? ";
+        System.out.println(recv.getId());
+        System.out.println(recv.getPw());
         preparedStatement = conn.prepareStatement(sql);
         preparedStatement.setString(1, recv.getId());
         preparedStatement.setString(2, recv.getPw());
-        System.out.println(recv.getId());
-        System.out.println(recv.getPw());
         resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
             recv.setId(resultSet.getString("id"));
             recv.setPw(resultSet.getString("pw"));
             recv.setName(resultSet.getString("name"));
+            System.out.println("resultSet : " + resultSet.getString("name"));
+            System.out.println("recv.getName : " + recv.getName());
             recv.setEmail(resultSet.getString("email"));
             recv.setAddress(resultSet.getString("address"));
             recv.setPhone(resultSet.getString("phone"));
@@ -48,8 +57,8 @@
         <table style="margin-left : auto; margin-right :auto;">
             <tr>
                 <td style="text-align: right">접속 중인 ID :</td>
-                <td colspan="2"><jsp:getProperty name="recv" property="id"/>
-                </td>
+                <td colspan="2"><jsp:getProperty name="recv" property="id"/></td>
+                <td><input type="hidden" name="id" value="<jsp:getProperty name="recv" property="id"/>"></input></td>
             </tr>
 
             <tr>
@@ -84,9 +93,8 @@
                 <td><input type="text" name="phone" value="<jsp:getProperty name="recv" property="phone"/>"></input></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td><input type="submit" value="수정하기"></td>
+                <td colspan="2" style="text-align: center"><a href="index.jsp">홈화면</a></td>
+                <td><input style="background:coral;width:100%; border:0px"type="submit" value="수정하기"></td>
             </tr>
         </table>
     </form>
