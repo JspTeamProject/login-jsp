@@ -108,7 +108,7 @@
  	}
     const idchk = () => {
         const idInput = document.querySelector("#id").value;
-        if (idInput == "") {
+        if (idInput === "") {
         	Swal.fire("id를 입력해주세요.");
             return false;
         } else {
@@ -222,6 +222,7 @@
         }).open();
     }
 </script>
+<script src="./KENKEN.js"></script>
 </body>
 
 
