@@ -12,105 +12,12 @@
     <script src="sweetalert2.all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script type="text/javascript">
-
-        function check() {
-            var id = $("#id").val();
-            var password = $("#password").val();
-            var name = $("#name").val();
-            var email = $("#email").val();
-            var phone = $("#phone").val();
-            var postcode = $(".postcode").val();
-            var address = $(".address").val();
-            var detailadd = $(".detailadd").val();
-
-            var reg1 = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
-            //비밀번호
-            var reg2 = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,20}$/; // 6~20문자 영대소문자, 숫자 혼합
-            //이름
-            var reg3 = /^[가-힣]{2,5}$/;
-            //전화번호
-            var reg4 = /^01(?:0|1|[6-9])[-]?(\d{3}|\d{4})[-]?(\d{4})$/; // 010-(3자리 또는 4자리 0부터 9까지)-(4자리 0부터 9까지)
-
-            //우편번호
-            var reg5 = /^[가-힣a-zA-Z0-9~!@#$%^&*()_+-]{2,40}$/; // 상세주소
-
-
-            // id 확인
-            if (id == "") {
-                Swal.fire("아이디를 입력해주세요.");
-                return false;
-            }
-            // 이메일 확인
-            var result1 = reg1.test(email);
-            if (email == "") {
-                Swal.fire("이메일을 입력해주세요");
-                return false;
-            } else if (result1 != true) {
-                Swal.fire("이메일을 정확하게 입력해주세요");
-                return false;
-            }
-
-            // 비밀번호 확인
-            var result2 = reg2.test(userpassword);
-            if (userpassword != pwdcheck) { // 비밀번호와 비밀번호확인란의 입력값이 같은지 확인
-                Swal.fire("비밀번호를 확인해주세요.");
-                return false;
-            } else if (userpassword == "") {
-                Swal.fire("비밀번호를 입력해주세요.");
-                return false;
-            } else if (pwdcheck == "") {
-                Swal.fire("비밀번호를 확인해주세요.");
-                return false;
-            } else if (result2 != true) {
-                Swal.fire("비밀번호를 정확하게 입력해주세요.(6~20자 영어대소문자,숫자 혼합)");
-                return false;
-            }
-
-            // 이름 확인
-            var result3 = reg3.test(username);
-            if (username == "") {
-                Swal.fire("이름을 입력해주세요.");
-                return false;
-            } else if (result3 != true) {
-                Swal.fire("이름을 정확하게 입력해주세요");
-                return false;
-            }
-
-            // 전화번호 확인
-            var result4 = reg4.test(phone);
-            if (phone == "") {
-                Swal.fire("전화번호를 입력해주세요.");
-                return false;
-            } else if (result4 != true) {
-                Swal.fire("전화번호를 정확하게 입력해주세요.");
-                return false;
-            }
-
-            // 우편번호 확인
-            var result5 = reg5.test(detailadd); // 상세주소
-            if (postcode == "") {
-                Swal.fire("우편번호를 입력해주세요.");
-                return false;
-            } else if (address == "") {
-                Swal.fire("주소를 입력해주세요.");
-                return false;
-            } else if (detailadd == "") {
-                Swal.fire("상세주소를 입력해주세요.");
-                return false;
-            } else if (result5 != true) {
-                Swal.fire("상세주소를 정확하게 입력해주세요.");
-                return false;
-            }
-
-            return true;
-        }
-
     </script>
 </head>
 <body>
 <div class="wrap">
     <label>비밀번호 찾기</label>
-    <form method="post" action="findpw.jsp" onsubmit="return check()">
+    <form method="post" action="findpwPro.jsp">
         <div>
             <div class="textForm">
                 <input type="text" name="id" id="id" class="input"
