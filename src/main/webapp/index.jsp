@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>로그인</title>
+    <meta charset="UTF-8">
 </head>
 <style>
       a:link{color:black; text-decoration:none;}
@@ -9,7 +10,7 @@
       a:hover{color:coral;text-decoration: underline;}
 </style>
 <body>
-<table style="margin-left : auto; margin-right : auto; text-align: center; border:solid coral 1px" >
+<table style="margin-left : auto; margin-right : auto; text-align: center; border:solid coral 1px">
     <form method="post" action="login.jsp">
         <tr>
             <td>아이디</td>
@@ -18,7 +19,7 @@
         </tr>
         <tr>
             <td>비밀번호</td>
-            <td><input type="text" name="pw"></td>
+            <td><input type="password" name="pw"></td>
         </tr>
         <tr>
             <td><a href="join.jsp">회원가입</a></td>
