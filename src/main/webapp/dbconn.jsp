@@ -11,8 +11,8 @@
         e.printStackTrace();
     }
     try {
-        conn = DriverManager.getConnection("jdbc:mysql://" + server + "/" + database + "?useSSL=false", user_name, password);
-        System.out.println("jdbc:mysql://" + server + "/" + database + "?useSSL=false" + user_name + password);
+        conn = DriverManager.getConnection("jdbc:mysql://" + server + "/" + database + "?useSSL=false&useUnicode=true&characterEncoding=utf8", user_name, password);
+        System.out.println("jdbc:mysql://" + server + "/" + database + "?useSSL=false&useUnicode=true&characterEncoding=utf8" + user_name + password);
     } catch (SQLException e) {
         e.printStackTrace();
     }

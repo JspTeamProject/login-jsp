@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>로그인</title>
+    <meta charset="UTF-8">
 </head>
 <style>
       a:link{color:black; text-decoration:none;}
@@ -18,7 +19,7 @@
         </tr>
         <tr>
             <td>비밀번호</td>
-            <td><input type="text" name="pw"></td>
+            <td><input type="password" name="pw"></td>
         </tr>
         <tr>
             <td><a href="join.jsp">회원가입</a></td>
