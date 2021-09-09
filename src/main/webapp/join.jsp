@@ -207,6 +207,4 @@
 </script>
 <script src="./KENKEN.js"></script>
 </body>
-
-
 </html>

@@ -1,5 +1,6 @@
 const idInput = document.querySelector("#id");
 const submit = document.querySelector("#submit");
+
 const idchk = () => {
     const idInput = document.querySelector("#id").value;
     if (idInput === "") {
@@ -17,5 +18,7 @@ function IdDenied(newId) {
 
 function IdConfirmed(){
     idInput.readOnly = true;
+    idInput.style.color = "#CD1039"
     submit.disabled = false;
+    submit.style.backgroundColor = "#63CC63"
 }
